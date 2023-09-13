@@ -1,0 +1,16 @@
+{% extends 'base.html' %}
+
+{% block title %}Madlib{% endblock %}
+
+{% block content %}
+	<h1>Madlib</h1>
+	<form action="/story">
+	  {% for word in yourPrompt %}
+	  	<div><input type="text" placeholder={{ word }} name={{ word }}></div>
+	  {% endfor %}
+	  <div><button>Submit</button></div>
+	</form>
+
+	<p>{{ urText }}</p>
+
+{% endblock %}
